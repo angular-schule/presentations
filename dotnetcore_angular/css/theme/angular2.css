@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * A theme for reveal.js by johannes (baed on white.scss)
+ * A theme for reveal.js by johannes (based on white.scss)
  */
 @font-face {
   font-family: "OpenSansRegular";
@@ -458,6 +458,9 @@ ul.model {
     font-size: 14px;
     line-height: 16px;
     max-height: 500px; }
+  .reveal pre code.big {
+    font-size: 32px;
+    line-height: 30px; }
   .reveal pre code.mini {
     font-size: 14px;
     line-height: 16px;
@@ -554,6 +557,8 @@ ul.model {
     display: none !important;
     height: 0; } }
 
+.display-none {
+  display: none; }
 /* device preview (iPhone iframe) */
 .device-preview {
   height: 810px;
@@ -756,7 +761,7 @@ ul.model {
     color: #a1292b;
     margin-left: 10px; }
 
-/* ******************* centered Angular 2 Shield logos ********************** */
+/* ******************* centered Angular Shield logos ********************** */
 /*
 .augury {
     .reveal {
