@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Präsentationen
+title: Angular-Schule
 ---
 
-* [dotnetcore_angular](dotnetcore_angular)
+{% include_relative README.md %}
