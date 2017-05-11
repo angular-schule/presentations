@@ -112,3 +112,104 @@ __Stolperfalle__
 
 
 # Let's code!
+
+
+
+
+## Extra: Howto EF Core
+<small>
+ASP.NET 5 is now ASP.NET Core 1.0<br>
+[EF7 is now EF Core 1.0](http://thedatafarm.com/data-access/ef7-is-now-ef-core-1-0-package-and-namespaces-change-too/)
+</small>
+
+
+```
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.Relational
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+```
+
+<small>&rarr; [Guide](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro#entity-framework-core-nuget-packages)</small>
+
+
+
+
+```csharp|small
+// book-rating/Models/BookRatingContext.cs
+
+using Microsoft.EntityFrameworkCore;
+
+namespace WebApplicationBasic.Models
+{
+    public class BookRatingContext : DbContext
+    {
+        public BookRatingContext(DbContextOptions<BookRatingContext> options) : base(options)
+        {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Book>().HasKey(t => t.Isbn);
+        }
+
+        public DbSet<Book> Books { get; set; }
+    }
+}
+```
+
+
+
+
+```csharp|small
+// /book-rating/Models/BookRepository.cs
+
+using System.Collections.Generic;
+using System.Linq;
+
+namespace WebApplicationBasic.Models
+{
+    public class BookRepository : IBookRepository
+    {
+        private BookRatingContext context;
+            
+        public BookRepository(BookRatingContext context)
+        {
+            this.context = context;          
+            context.Database.EnsureCreated();
+
+            if (!context.Books.Any())
+            {
+                context.Books.Add(new Book { Isbn = "000", Title = "Angular 4", Rating = 5 });
+                context.Books.Add(new Book { Isbn = "111", Title = ".NET Core", Rating = 3 });
+                context.SaveChanges();
+            }
+        }
+        public IEnumerable<Book> FindAll() {
+            return this.context.Books.OrderBy(f => f.Isbn);
+        }
+        public Book FindByIsbn(string isbn) {
+            return this.context.Books.FirstOrDefault(f => f.Isbn == isbn);
+        }
+    }
+}
+```
+
+
+
+
+```csharp|small
+// Startup.cs
+
+public void ConfigureServices(IServiceCollection services)
+{
+    // register EF context - hint: using Microsoft.EntityFrameworkCore;
+    services.AddDbContext<BookRatingContext>(options =>
+        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+}
+```
+
+
+
+
+![tada](img/code-first.png)
