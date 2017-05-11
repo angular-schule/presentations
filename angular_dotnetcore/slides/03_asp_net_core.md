@@ -30,17 +30,18 @@
 
 
 # Nachteile
-* WCF und Web Forms
+* kein WCF und Web Forms
 * viele NS fehlen, u.a. System.Drawing<br><small>(man merkt erst das man es braucht wenn es nicht da ist)</small>
-* NuGet-Pakete müssen noch migriert werden
-* riesige Deplyoment-Pakete (alles drinn
+* viele, viele NuGet-Pakete müssen noch migriert werden
+* Output: riesige Deployment-Pakete (alles drinn)
+* `project.json` &rarr; `.xproj` &rarr; `.csproj` 	
 
 
 
 
 # Hosting
 
-* Kestrel \* (Cross-Plattform, Self-Host )
+* Kestrel\* (Cross-Plattform, Self-Host )
 * [WebListener](https://www.nuget.org/packages/Microsoft.AspNetCore.Server.WebListener/) (Windows, Self-Host)
 * IIS + Kestrel
 * Nginx + Kestrel
@@ -64,7 +65,6 @@ __ASP.NET WebForms__
 
 ### Nach Core
 __ASP.NET MVC inkl. Web API__  
-(__ASP.NET Web Pages__)  
 
 
 

@@ -1,5 +1,5 @@
 ![](img/logos/angular2-logo.svg) <!-- .element: style="width:200px; margin-bottom: -10px" -->
-# Angular 2 
+# Angular
 
 
 
