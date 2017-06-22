@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * A theme for reveal.js by johannes (based on white.scss)
+ * A theme for reveal.js by johannes (baed on white.scss)
  */
 @font-face {
   font-family: "OpenSansRegular";
@@ -458,9 +458,6 @@ ul.model {
     font-size: 14px;
     line-height: 16px;
     max-height: 500px; }
-  .reveal pre code.big {
-    font-size: 32px;
-    line-height: 30px; }
   .reveal pre code.mini {
     font-size: 14px;
     line-height: 16px;
@@ -557,8 +554,6 @@ ul.model {
     display: none !important;
     height: 0; } }
 
-.display-none {
-  display: none; }
 /* device preview (iPhone iframe) */
 .device-preview {
   height: 810px;
@@ -627,24 +622,10 @@ ul.model {
   -o-transition: none;
   transition: none; }
 
-.core .reveal {
-  background-image: url("../../img/logos/core-logo.svg");
-  background-position: 10px 10px;
-  background-size: 100px, 100px;
-  -webkit-transition: background-image 0.8s linear;
-  -moz-transition: background-image 0.8s linear;
-  -o-transition: background-image 0.8s linear;
-  transition: background-image 0.8s linear; }
-  .core .reveal h1, .core .reveal h2, .core .reveal h3, .core .reveal h4, .core .reveal strong, .core .reveal i {
-    color: #68217a !important; }
-  .core .reveal section ul {
-    list-style-type: disc !important;
-    font-size: 0.8em; }
-
 .angular .reveal {
   background-image: url("../../img/logos/angular2-logo.svg");
   background-position: 10px 10px;
-  background-size: 100px, 100px;
+  background-size: 100px 100px;
   -webkit-transition: background-image 0.8s linear;
   -moz-transition: background-image 0.8s linear;
   -o-transition: background-image 0.8s linear;
@@ -653,19 +634,25 @@ ul.model {
     list-style-type: disc !important;
     font-size: 0.8em; }
 
-.typescript .reveal {
-  background-image: url("../../img/states/typescript-logo.png");
-  background-position: 10px 10px;
+.jasmine .reveal {
+  background-image: url("../../img/states/jasmine-logo.svg");
+  background-position: 0px 0px;
+  background-size: 140px 140px;
   -webkit-transition: background-image 0.8s linear;
   -moz-transition: background-image 0.8s linear;
   -o-transition: background-image 0.8s linear;
   transition: background-image 0.8s linear; }
-  .typescript .reveal h1, .typescript .reveal h2, .typescript .reveal h3, .typescript .reveal h4, .typescript .reveal strong, .typescript .reveal i {
-    color: #007ACC !important; }
+  .jasmine .reveal h1, .jasmine .reveal h2, .jasmine .reveal h3, .jasmine .reveal h4, .jasmine .reveal strong, .jasmine .reveal i {
+    color: #8a4182 !important; }
+  .jasmine .reveal a {
+    color: #673161; }
+  .jasmine .reveal table {
+    font-size: 0.6em; }
 
 .karma .reveal {
-  background-image: none;
+  background-image: url("../../img/states/karma-logo.svg");
   background-position: 10px 10px;
+  background-size: 120px 120px;
   -webkit-transition: background-image 0.8s linear;
   -moz-transition: background-image 0.8s linear;
   -o-transition: background-image 0.8s linear;
@@ -673,38 +660,20 @@ ul.model {
   .karma .reveal h1, .karma .reveal h2, .karma .reveal h3, .karma .reveal h4, .karma .reveal strong, .karma .reveal i {
     color: #429f87 !important; }
   .karma .reveal a {
-    color: #337b68;
-    font-size: 0.8em; }
+    color: #337b68; }
 
-.kata .reveal {
-  background-image: none; }
-  .kata .reveal::before {
-    content: "\5957\62F3";
-    color: #a1292b;
-    font-size: 2em;
-    margin-left: 10px;
-    line-height: 1.2em; }
-  .kata .reveal section {
-    width: 1500px !important;
-    margin-left: -125px; }
-    .kata .reveal section ul {
-      list-style-type: disc !important;
-      font-size: 0.8em; }
-    .kata .reveal section code {
-      background-color: ghostwhite !important; }
-
-.universal .reveal {
-  background-image: url("../../img/states/universal-logo.png");
+.protractor .reveal {
+  background-image: url("../../img/states/protractor-logo.png");
   background-position: 10px 10px;
-  background-size: 100px;
+  background-size: 120px 120px;
   -webkit-transition: background-image 0.8s linear;
   -moz-transition: background-image 0.8s linear;
   -o-transition: background-image 0.8s linear;
   transition: background-image 0.8s linear; }
-  .universal .reveal h1, .universal .reveal h2, .universal .reveal h3, .universal .reveal h4, .universal .reveal strong, .universal .reveal i {
-    color: #258200 !important; }
-  .universal .reveal a {
-    color: #258200; }
+  .protractor .reveal h1, .protractor .reveal h2, .protractor .reveal h3, .protractor .reveal h4, .protractor .reveal strong, .protractor .reveal i {
+    color: #b52e31 !important; }
+  .protractor .reveal a {
+    color: #8c2426; }
 
 .angular2start .reveal {
   background-image: url("../../img/logos/angular2-logo.svg");
@@ -761,27 +730,7 @@ ul.model {
     color: #a1292b;
     margin-left: 10px; }
 
-/* ******************* centered Angular Shield logos ********************** */
-/*
-.augury {
-    .reveal {
-
-        div.banner {
-          background: -webkit-linear-gradient(rgb(81,45,168),rgb(103,58,183));
-          background: linear-gradient(rgb(81,45,168),rgb(103,58,183));
-        }
-
-        background-image: url('../../img/augury-logo.svg');
-        background-position: 10px 10px;
-        background-size: 100px;
-
-        @include transition(background-image 0.8s linear);
-        @include color(rgb(103,58,183));
-        a {
-            color: rgb(103,58,183);
-        }
-    }
-}*/
+/* ******************* centered Angular 2 Shield logos ********************** */
 .ng-shield {
   margin: auto;
   width: 353px;

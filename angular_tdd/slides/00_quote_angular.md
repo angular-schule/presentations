@@ -1,4 +1,6 @@
 <blockquote>
-Angular 1 is a framework.<br>Angular 2 is a platform. &nbsp; &nbsp;
+People also underestimate the time they spend debugging.  
+<!--They underestimate how much time they can spend chasing a long bug.  -->
+With testing, I know straight away when I added a bug.
 </blockquote>
-<small>Brad Green (Google)</small>
+<small>Martin Fowler</small>
