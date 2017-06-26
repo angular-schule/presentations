@@ -16,11 +16,11 @@ $break-md: 768px;
 $break-lg: 992px;
 $break-xl: 1200px;
 
-
 .hero,
 .jasmine,
 .hero_large {
     .reveal {
+
         .backgrounds {
 
             content: '';
@@ -29,7 +29,7 @@ $break-xl: 1200px;
             background: linear-gradient(0deg, #FFF 1px, $color_bg_2 1px, $color_bg_1 100%);
             background-position: bottom;
             width: 100%;
-            height: 63%;
+            height: 80%;
         }
 
         .backgrounds::before {
@@ -52,7 +52,7 @@ $break-xl: 1200px;
 .hero,
 .jasmine, {
     .reveal .backgrounds {
-        height: 40%;
+        height: 30%;
 
     }
 }

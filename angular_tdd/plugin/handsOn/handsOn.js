@@ -30,10 +30,10 @@
             if (currentSlide.childNodes[i].className == "handsOn") {
                 handsOnNode = currentSlide.childNodes[i];
                 break;
-            }        
+            }
         }
 
-        if (handsOnNode) {  
+        if (handsOnNode) {
             handsOnMaster.style.display = "block";
             handsOnDisplay.innerHTML = handsOnNode.innerHTML;
             reveal.classList.add("sectionMoveLeft");
