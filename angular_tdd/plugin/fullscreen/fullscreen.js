@@ -6,7 +6,7 @@
 
     // add divs to DOM
     var s = '<div id="fullscreenMaster"'
-        + 'style="display:none;position:absolute;padding:0;top:0;left:0;width:100%px;height:100%;z-index:31;">'
+        + 'style="display:none;position:absolute;padding:0;top:0;left:0;width:100%px;height:100%;z-index:2;">'
         + '</div>';
 
     var div = document.createElement('div');
