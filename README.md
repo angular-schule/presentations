@@ -6,7 +6,7 @@
   Den Start erleichtert uns Microsoft mit den ASP.NET Core JavaScript Services. 
 
 
-* [Redux mit Angular](https://docs.google.com/presentation/d/1K4UoChQ7_GXxxk0aHTpZi6pftLgZxFSCilNBqk0mBVE/edit?usp=sharing) -- Vortrag
+* [Redux mit Angular](https://docs.google.com/presentation/d/15baFhy7Bm-UYXpj6q1qz5PyWb70-qwWXPdpYJtamnfY/) -- Vortrag
 
   Alle Single-Page-Anwendungen haben dasselbe Problem: sie werden mit jedem neuen Feature zunehmend komplizierter.
   Der Status der Anwendung wird immer schwerer zu verwalten und Bugs schleichen sich ein.
