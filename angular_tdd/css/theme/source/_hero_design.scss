@@ -37,7 +37,7 @@ $break-xl: 1200px;
             content: '';
             position: absolute;
 
-            background: url('/img/hero-divider.svg'), url("/img/lines.svg");
+            background: url('../../img/hero-divider.svg'), url("../../img/lines.svg");
             background-size: 100%, cover;
             background-position: bottom, center;
             background-repeat: no-repeat;
