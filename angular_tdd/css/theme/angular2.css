@@ -613,7 +613,11 @@ ul.model {
  * <section data-state="typescript">
  */
 /* ***************************** TOP Left Logos ***************************** */
-.reveal {
+.reveal::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-image: none;
   background-repeat: no-repeat;
   background-position: left top;
@@ -622,7 +626,7 @@ ul.model {
   -o-transition: none;
   transition: none; }
 
-.angular .reveal {
+.angular .reveal::after {
   background-image: url("../../img/logos/angular2-logo.svg");
   background-position: 10px 10px;
   background-size: 100px 100px;
@@ -630,11 +634,12 @@ ul.model {
   -moz-transition: background-image 0.8s linear;
   -o-transition: background-image 0.8s linear;
   transition: background-image 0.8s linear; }
-  .angular .reveal section ul {
-    list-style-type: disc !important;
-    font-size: 0.8em; }
 
-.jasmine .reveal {
+.angular .reveal section ul {
+  list-style-type: disc !important;
+  font-size: 0.8em; }
+
+.jasmine .reveal::after {
   background-image: url("../../img/states/jasmine-logo.svg");
   background-position: 0px 0px;
   background-size: 140px 140px;
@@ -642,14 +647,17 @@ ul.model {
   -moz-transition: background-image 0.8s linear;
   -o-transition: background-image 0.8s linear;
   transition: background-image 0.8s linear; }
-  .jasmine .reveal h1, .jasmine .reveal h2, .jasmine .reveal h3, .jasmine .reveal h4, .jasmine .reveal strong, .jasmine .reveal i {
-    color: #8a4182 !important; }
-  .jasmine .reveal a {
-    color: #673161; }
-  .jasmine .reveal table {
-    font-size: 0.6em; }
 
-.karma .reveal {
+.jasmine .reveal h1, .jasmine .reveal h2, .jasmine .reveal h3, .jasmine .reveal h4, .jasmine .reveal strong, .jasmine .reveal i {
+  color: #8a4182 !important; }
+
+.jasmine .reveal a {
+  color: #673161; }
+
+.jasmine .reveal table {
+  font-size: 0.6em; }
+
+.karma .reveal::after {
   background-image: url("../../img/states/karma-logo.svg");
   background-position: 10px 10px;
   background-size: 120px 120px;
@@ -657,74 +665,78 @@ ul.model {
   -moz-transition: background-image 0.8s linear;
   -o-transition: background-image 0.8s linear;
   transition: background-image 0.8s linear; }
-  .karma .reveal h1, .karma .reveal h2, .karma .reveal h3, .karma .reveal h4, .karma .reveal strong, .karma .reveal i {
-    color: #429f87 !important; }
-  .karma .reveal a {
-    color: #337b68; }
 
-.protractor .reveal {
-  background-image: url("../../img/states/protractor-logo.png");
+.karma .reveal h1, .karma .reveal h2, .karma .reveal h3, .karma .reveal h4, .karma .reveal strong, .karma .reveal i {
+  color: #429f87 !important; }
+
+.karma .reveal a {
+  color: #337b68; }
+
+.protractor .reveal::after {
+  background-image: url("../../img/states/protractor-logo.svg");
   background-position: 10px 10px;
   background-size: 120px 120px;
   -webkit-transition: background-image 0.8s linear;
   -moz-transition: background-image 0.8s linear;
   -o-transition: background-image 0.8s linear;
   transition: background-image 0.8s linear; }
-  .protractor .reveal h1, .protractor .reveal h2, .protractor .reveal h3, .protractor .reveal h4, .protractor .reveal strong, .protractor .reveal i {
-    color: #b52e31 !important; }
-  .protractor .reveal a {
-    color: #8c2426; }
 
-.angular2start .reveal {
+.protractor .reveal h1, .protractor .reveal h2, .protractor .reveal h3, .protractor .reveal h4, .protractor .reveal strong, .protractor .reveal i {
+  color: #b52e31 !important; }
+
+.protractor .reveal a {
+  color: #8c2426; }
+
+.angular2start .reveal::after {
   background-image: url("../../img/logos/angular2-logo.svg");
   background-position: top -80px left -100px, top 20px right 20px;
   background-size: 500px, 200px; }
 
 @media print {
-  .angular2start .reveal {
+  .angular2start .reveal::after {
     background-image: url("../../img/logos/angular2-logo.svg");
     background-position: top -40px left -50px, top 20px right 20px;
     background-size: 250px, 100px; } }
 
-.github .reveal {
+.github .reveal::after {
   background-image: none; }
-  .github .reveal::before {
+  .github .reveal::after::before {
     font: normal normal normal 3em FontAwesome;
     content: "";
     color: #a1292b;
     margin-left: 10px; }
-  .github .reveal::before {
+  .github .reveal::after::before {
     line-height: 1.2em; }
 
-.star .reveal {
+.star .reveal::after {
   background-image: none; }
-  .star .reveal::before {
+  .star .reveal::after::before {
     font: normal normal normal 3em FontAwesome;
     content: "";
     color: #a1292b;
     margin-left: 10px; }
-  .star .reveal::before {
+  .star .reveal::after::before {
     line-height: 1.2em; }
 
-.code .reveal {
+.code .reveal::after {
   background-image: none; }
-  .code .reveal::before {
+  .code .reveal::after::before {
     font: normal normal normal 3em FontAwesome;
     content: "";
     color: #a1292b;
     margin-left: 10px; }
 
-.forms .reveal {
+.forms .reveal::after {
   background-image: none; }
-  .forms .reveal::before {
+  .forms .reveal::after::before {
     font: normal normal normal 3em FontAwesome;
     content: "";
     color: #a1292b;
     margin-left: 10px; }
 
-.refresh .reveal {
+.refresh .reveal::after {
   background-image: none; }
-  .refresh .reveal::before {
+  .refresh .reveal::after::before {
     font: normal normal normal 3em FontAwesome;
     content: "";
     color: #a1292b;
@@ -787,19 +799,16 @@ aside.handsOn {
 .sectionMoveLeft {
   margin-left: -200px !important; }
 
-.hero .reveal .backgrounds,
-.jasmine .reveal .backgrounds,
-.hero_large .reveal .backgrounds {
+.reveal .backgrounds {
   content: '';
   position: absolute;
   background: linear-gradient(0deg, #FFF 1px, #C30023 1px, #535EA7 100%);
   background-position: bottom;
   width: 100%;
-  height: 80%; }
+  height: 30%;
+  transition: ease all 500ms; }
 
-.hero .reveal .backgrounds::before,
-.jasmine .reveal .backgrounds::before,
-.hero_large .reveal .backgrounds::before {
+.reveal .backgrounds::before {
   content: '';
   position: absolute;
   background: url("../../img/hero-divider.svg"), url("../../img/lines.svg");
@@ -808,8 +817,14 @@ aside.handsOn {
   background-repeat: no-repeat;
   width: 105%;
   height: 100%;
-  margin-left: -5px; }
+  margin-left: -5px;
+  transition: ease all 500ms; }
 
-.hero .reveal .backgrounds,
-.jasmine .reveal .backgrounds {
-  height: 30%; }
+.hero .reveal .backgrounds {
+  height: 80%; }
+
+.hero_xxl .reveal .backgrounds {
+  height: 90%; }
+
+.hero_xxl *, .hero_xxl h1, .hero_xxl a {
+  color: white; }

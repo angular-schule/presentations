@@ -19,7 +19,6 @@ describe("A suite", () => {
 
 
 ### Die wichtigsten Methoden
-<small></small>
 
 | Methode        |  Beschreibung |
 |----------------|---------------| 

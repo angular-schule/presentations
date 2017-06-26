@@ -30,7 +30,13 @@
 // states folder: here i usally make those logos a bit smaller and reduce details, and/or make it a bit transparent
 // logos folder: untouched logos, can be used in states or in the content
 
-.reveal {
+.reveal::after {
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
     background-image: none;
     background-repeat: no-repeat;
     background-position: left top;
@@ -38,32 +44,35 @@
     @include transition(none);
 }
 
+
+
 .angular {
-    .reveal {
+    .reveal::after {
         background-image: url('../../img/logos/angular2-logo.svg');
         background-position: 10px 10px;
         background-size: 100px 100px;
 
         @include transition(background-image 0.8s linear);
-
+    }
+    .reveal {
         section {
             ul {
                 list-style-type: disc !important;
                 font-size: 0.8em;
             }
-
         }
-
     }
 }
 
 .jasmine {
-    .reveal {
+    .reveal::after {
         background-image: url('../../img/states/jasmine-logo.svg');
         background-position: 0px 0px;
         background-size: 140px 140px;
 
         @include transition(background-image 0.8s linear);
+    }
+    .reveal {
         @include color(#8a4182);
 
         a {
@@ -77,12 +86,14 @@
 }
 
 .karma {
-    .reveal {
+    .reveal::after {
         background-image: url('../../img/states/karma-logo.svg');
         background-position: 10px 10px;
         background-size: 120px 120px;
 
         @include transition(background-image 0.8s linear);
+    }
+    .reveal {
         @include color(#429f87);
 
         a {
@@ -92,12 +103,14 @@
 }
 
 .protractor {
-    .reveal {
-        background-image: url('../../img/states/protractor-logo.png');
+    .reveal::after {
+        background-image: url('../../img/states/protractor-logo.svg');
         background-position: 10px 10px;
         background-size: 120px 120px;
 
         @include transition(background-image 0.8s linear);
+    }
+    .reveal {
         @include color(#b52e31);
 
         a {
@@ -107,7 +120,7 @@
 }
 
 .angular2start {
-    .reveal {
+    .reveal::after {
         background-image: url('../../img/logos/angular2-logo.svg');
         background-position: top -80px left -100px, top 20px right 20px;
         background-size: 500px, 200px;
@@ -116,7 +129,7 @@
 
 @media print {
     .angular2start {
-        .reveal {
+        .reveal::after {
             background-image: url('../../img/logos/angular2-logo.svg');
             background-position: top -40px left -50px, top 20px right 20px;
             background-size: 250px, 100px;
@@ -125,7 +138,7 @@
 }
 
 .github {
-    .reveal {
+    .reveal::after {
         background-image: none;
         @include revealAwesome("\f09b");
         &::before {
@@ -135,7 +148,7 @@
 }
 
 .star {
-    .reveal {
+    .reveal::after {
         background-image: none;
         @include revealAwesome("\f006");
         &::before {
@@ -145,21 +158,21 @@
 }
 
 .code {
-    .reveal {
+    .reveal::after {
         background-image: none;
         @include revealAwesome("\f121");
     }
 }
 
 .forms {
-    .reveal {
+    .reveal::after {
         background-image: none;
         @include revealAwesome("\f046");
     }
 }
 
 .refresh {
-    .reveal {
+    .reveal::after {
         background-image: none;
         @include revealAwesome("\f021");
     }
