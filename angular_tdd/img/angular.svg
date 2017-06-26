@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="143px" height="154px" viewBox="0 0 143 154" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>angular</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="start" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-967.000000, -430.000000)" id="angular" fill-rule="nonzero">
+            <g transform="translate(967.000000, 430.000000)">
+                <g id="Layer_1">
+                    <g id="Group">
+                        <polygon id="Shape" fill="#DD0031" points="71.5964912 0 0.204745826 25.564 11.0937124 120.351 71.5964912 154 132.09927 120.351 142.988237 25.564"></polygon>
+                        <polygon id="Shape" fill="#C3002F" points="71.5964912 17.094 71.5964912 95.018 71.5964912 154 132.09927 120.351 142.988237 25.564 71.5964912 0"></polygon>
+                        <path d="M71.5964912,17.017 L26.967065,117.502 L26.967065,117.502 L43.6072463,117.502 L43.6072463,117.502 L52.5791412,95.018 L90.4604755,95.018 L99.4323705,117.502 L99.4323705,117.502 L116.072552,117.502 L116.072552,117.502 L71.5964912,17.017 L71.5964912,17.017 L71.5964912,17.017 L71.5964912,17.017 L71.5964912,17.017 Z M84.6325779,81.158 L58.5604045,81.158 L71.5964912,49.665 L84.6325779,81.158 Z" id="Shape" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
