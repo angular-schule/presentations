@@ -13,8 +13,8 @@ $ ng test
 
 
 
-### Tests für das Model `Book`
-<small>Fachliche Anforderungen für unser Datenmodell</small>
+### Tests für die Entität `Book`
+<small>Fachliche Anforderungen für unsere Geschäftslogik</small>
 
 ```typescript
 // /src/app/shared/book.spec.ts
@@ -28,3 +28,12 @@ describe('Rating a book', () => {
     });
 });
 ```
+
+
+
+
+## Wann einsetzen?
+
+* * Services
+* * Pipes
+* * Komponenten <small style="margin-top: 15px;">(mit viel Geschäftslogik)</small>

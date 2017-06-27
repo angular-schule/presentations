@@ -1,15 +1,18 @@
-<div style="margin-left:240px;text-align:left"><strong>Integrationstest mit</strong></div>
+<div style="margin-left:240px;text-align:left"><strong>Shallow Unit-Tests mit</strong></div>
 ![Karma Logo](img/logos/karma-logo.svg) <!-- .element: width="50%" -->
 
 
 
 
-## Shallow Unit-Tests
+## <br>Shallow Unit-Tests
 <small>Template und Komponente gemeinsam testen</small>
 
 1. Verhalten einer Komponente wird getestet
 2. Das zugehörige Template wird kompiliert
 3. Interaktionen mit dem Template verändern den Zustand der Komponente
+
+<br>
+<small>"TestBed" kann auch für andere Bausteine genutzt werden,<br>bietet sich aber häufig nicht an!</small>
 
 
 
@@ -34,7 +37,7 @@ import { By } from '@angular/platform-browser';
 
 
 
-## Testvorbereitung 2
+## <br>Testvorbereitung 2
 
 ```typescript|small
 
@@ -83,3 +86,12 @@ it('increases the rating of the book', () => {
   expect(card.book.rating).toBe(1);
 });
 ```
+
+
+
+
+## Wann einsetzen?
+
+* * Einzelne Komponenten
+* * wenn Bindings/HTML oder Lifecycle von Interesse
+* * Isolierte Unit-Tests stets bevorzugen!
