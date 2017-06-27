@@ -6,9 +6,9 @@
 
 ## Tipps
 
-* * eigene Stubs bevorzugen (z.B. nicht gleich `'@angular/http/testing`)
+* * eigene Stubs bevorzugen<br><small>(z.B. nicht gleich `@angular/http/testing`)</small>
 * * Jasmine Spies verwenden
-* * `async()` zum asynchronen Code testen
+* * `async()` für asynchronen Code
 
 
 
@@ -24,8 +24,8 @@ httpStub = {
 
 TestBed.configureTestingModule({
   providers: [
-    { provide: Http, useValue: httpStub
-  }]
+    { provide: Http, useValue: httpStub }
+  ]
 });
 
 ``` 
@@ -33,15 +33,18 @@ TestBed.configureTestingModule({
 
 
 
-### Beispiel: done(), der Klassiker
+### Beispiel: done()
+<small>der Klassiker</small>
 
 ```typescript
 describe('async tests', () => {
   it('require a signal that execution has been finished', (done) => {
+
     setTimeout(() => {
       expect(true).toBeTruthy();
       done(); // <-- 😞
     }, 500);
+
   });
 });
 ```
@@ -49,16 +52,19 @@ describe('async tests', () => {
 
 
 
-### Beispiel: async(), mit Zonen!
+### Beispiel: async()
+<small>cool, mit Zonen!</small>
 
 ```typescript
 import { async } from '@angular/core/testing';
 
 describe('async tests', () => {
   it('can be simplified via async()', async(() => {
+
     setTimeout(() => {
       expect(true).toBeTruthy();
     }, 500);
+    
    }));
 });
 ```
