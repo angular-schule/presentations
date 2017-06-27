@@ -6,7 +6,7 @@
 
 ## Wann einsetzen?
 
-* * Komponent-Baum von Interesse
+* * Zusammenspiel der Komponenten von Interesse
 * * Direktiven testen <small style="margin-top: 15px;">(mithilfe einer anderen Komponente)</small>
-* * Isolierte Unit-Tests oder<br>Shallow Unit-Test stets bevorzugen!
+* * Unit-Tests stets bevorzugen!
 

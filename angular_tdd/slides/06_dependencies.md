@@ -1,5 +1,5 @@
-<div style="margin-left:240px;text-align:left"><strong>Abhängigkeiten</strong></div>
-![Jasmine Logo](img/logos/jasmine-logo.svg) <!-- .element: width="50%" -->
+<div style="margin-left:130px;text-align:left;font-size:2em"><strong>Abhängigkeiten &</strong></div>
+![Jasmine Logo](img/logos/jasmine-logo.svg) <!-- .element: width="45%" style="margin-left:150px" -->
 
 
 
@@ -64,7 +64,7 @@ describe('async tests', () => {
     setTimeout(() => {
       expect(true).toBeTruthy();
     }, 500);
-    
+
    }));
 });
 ```
