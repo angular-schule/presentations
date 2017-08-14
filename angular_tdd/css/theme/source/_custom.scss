@@ -156,6 +156,12 @@ ul.model {
         max-height: 500px;
     }
 
+    &.big {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+
     &.mini {
         font-size: 14px;
         line-height: 16px;
@@ -250,6 +256,11 @@ ul.model {
         height: 0; // really, really not display
     }
 }
+
+.display-none {
+    display: none;
+}
+
 
 /* device preview (iPhone iframe) */
 

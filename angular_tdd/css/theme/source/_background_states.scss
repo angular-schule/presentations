@@ -44,8 +44,6 @@
     @include transition(none);
 }
 
-
-
 .angular {
     .reveal::after {
         background-image: url('../../img/logos/angular2-logo.svg');
@@ -141,6 +139,8 @@
     .reveal::after {
         background-image: none;
         @include revealAwesome("\f09b");
+    }
+    .reveal {
         &::before {
             line-height: 1.2em;
         }
@@ -151,6 +151,7 @@
     .reveal::after {
         background-image: none;
         @include revealAwesome("\f006");
+    .reveal {
         &::before {
             line-height: 1.2em;
         }
@@ -178,8 +179,7 @@
     }
 }
 
-/* ******************* centered Angular 2 Shield logos ********************** */
-
+/* ******************* centered Angular Shield logos ********************** */
 
 .ng-shield {
     margin: auto;
