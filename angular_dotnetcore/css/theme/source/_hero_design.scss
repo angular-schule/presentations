@@ -1,0 +1,70 @@
+// variables
+$color_primary: #3577CB;
+$color_secondary: #1E1E1E;
+$color_tertiary: #C30023;
+$color_quaternary: #F8F8F8;
+$color_bg_1: #535EA7;
+$color_bg_2: #C30023;
+// $fonts: 'Roboto', 'Helvetica Neue', Helvetica, Arial sans-serif;
+$font_thin: 100;
+$font_light: 300;
+$font_normal: 400;
+$font_medium: 500;
+$font_bold: 700;
+$break-xs: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+
+.reveal {
+
+    .backgrounds {
+
+        content: '';
+        position: absolute;
+
+        background: linear-gradient(0deg, #FFF 1px, $color_bg_2 1px, $color_bg_1 100%);
+        background-position: bottom;
+        width: 100%;
+        height: 30%;
+        transition: ease all 500ms;
+    }
+
+    .backgrounds::before {
+
+        content: '';
+        position: absolute;
+
+        // background: url('../../img/hero-divider.svg'), url("../../img/lines.svg");
+        background: url('../../img/hero-divider.svg');
+        background-size: 100%, cover;
+        background-position: bottom, center;
+        background-repeat: no-repeat;
+
+        width: 105%;
+        height: 100%;
+        margin-left: -5px;
+        transition: ease all 500ms;
+    }
+}
+
+.hero {
+    .reveal .backgrounds {
+        height: 70%;
+    }
+}
+.hero_xxl {
+    .reveal .backgrounds {
+        height: 90%;
+    }
+    *, h1, a {
+        color: white;
+    }
+}
+
+.fullscreen_background {
+    .reveal .backgrounds {
+        height: 100%;
+    }
+}
+

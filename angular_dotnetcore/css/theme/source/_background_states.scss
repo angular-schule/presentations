@@ -30,7 +30,13 @@
 // states folder: here i usally make those logos a bit smaller and reduce details, and/or make it a bit transparent
 // logos folder: untouched logos, can be used in states or in the content
 
-.reveal {
+.reveal::after {
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
     background-image: none;
     background-repeat: no-repeat;
     background-position: left top;
@@ -38,76 +44,127 @@
     @include transition(none);
 }
 
-.core {
+.angular {
+    .reveal::after {
+        background-image: url('../../img/logos/angular2-logo.svg');
+        background-position: 10px 10px;
+        background-size: 100px 100px;
+
+        @include transition(background-image 0.8s linear);
+    }
     .reveal {
+        section {
+            ul {
+                list-style-type: disc !important;
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+.core {
+    .reveal::after {
         background-image: url('../../img/logos/core-logo.svg');
         background-position: 10px 10px;
-        background-size: 100px, 100px;
+        background-size: 100px 100px;
 
         @include transition(background-image 0.8s linear);
         @include color(#68217a);
-
+    }
+    .reveal {
         section {
             ul {
                 list-style-type: disc !important;
                 font-size: 0.8em;
             }
-
         }
-
     }
 }
 
-.angular {
-    .reveal {
-        background-image: url('../../img/logos/angular2-logo.svg');
-        background-position: 10px 10px;
-        background-size: 100px, 100px;
+/*
+.jasmine {
+    .reveal::after {
+        background-image: url('../../img/states/jasmine-logo.svg');
+        background-position: 0px 0px;
+        background-size: 140px 140px;
 
         @include transition(background-image 0.8s linear);
+    }
+    .reveal {
+        @include color(#8a4182);
 
-        section {
-            ul {
-                list-style-type: disc !important;
-                font-size: 0.8em;
-            }
-
+        a {
+            color: darken(#8a4182, 10%);
         }
 
+        table {
+            font-size: 0.6em;
+        }
     }
 }
+*/
 
 .typescript {
-    .reveal {
+    .reveal::after {
         background-image: url('../../img/states/typescript-logo.png');
         background-position: 10px 10px;
 
         @include transition(background-image 0.8s linear);
+    }
+    .reveal {
         @include color(#007ACC);
     }
 }
 
 .karma {
-    .reveal {
-        //background-image: url('../../img/states/karma-logo.svg');
-        background-image: none;
+    .reveal::after {
+        background-image: url('../../img/states/karma-logo.svg');
         background-position: 10px 10px;
+        background-size: 120px 120px;
 
         @include transition(background-image 0.8s linear);
+    }
+    .reveal {
         @include color(#429f87);
 
         a {
             color: darken(#429f87, 10%);
-            font-size: 0.8em;
+        }
+    }
+}
+
+.protractor {
+    .reveal::after {
+        background-image: url('../../img/states/protractor-logo.svg');
+        background-position: 10px 10px;
+        background-size: 120px 120px;
+
+        @include transition(background-image 0.8s linear);
+    }
+    .reveal {
+        @include color(#b52e31);
+
+        a {
+            color: darken(#b52e31, 10%);
+        }
+    }
+}
+
+.bootstrap {
+    .reveal {
+        @include color(#7952b3);
+
+        a {
+            color: darken(#7952b3, 10%);
         }
     }
 }
 
 .kata {
-    .reveal {
-
+    .reveal::after {
         background-image: none;
-
+    }
+    .reveal {
         &::before {
             content: "\5957\62F3";
             color: $headingColor;
@@ -134,12 +191,14 @@
 }
 
 .universal {
-    .reveal {
+    .reveal::after {
         background-image: url('../../img/states/universal-logo.png');
         background-position: 10px 10px;
         background-size: 100px;
 
         @include transition(background-image 0.8s linear);
+    }
+    .reveal {
         @include color(#258200);
         a {
             color: #258200;
@@ -148,8 +207,8 @@
 }
 
 .angular2start {
-    .reveal {
-        background-image: url('../../img/logos/angular2-logo.svg');// , url('../../img/logos/developer_media_logo.jpg');
+    .reveal::after {
+        background-image: url('../../img/logos/angular2-logo.svg');
         background-position: top -80px left -100px, top 20px right 20px;
         background-size: 500px, 200px;
     }
@@ -157,8 +216,8 @@
 
 @media print {
     .angular2start {
-        .reveal {
-            background-image: url('../../img/logos/angular2-logo.svg');// , url('../../img/logos/developer_media_logo.jpg');
+        .reveal::after {
+            background-image: url('../../img/logos/angular2-logo.svg');
             background-position: top -40px left -50px, top 20px right 20px;
             background-size: 250px, 100px;
         }
@@ -166,9 +225,11 @@
 }
 
 .github {
-    .reveal {
+    .reveal::after {
         background-image: none;
         @include revealAwesome("\f09b");
+    }
+    .reveal {
         &::before {
             line-height: 1.2em;
         }
@@ -176,9 +237,11 @@
 }
 
 .star {
-    .reveal {
+    .reveal::after {
         background-image: none;
         @include revealAwesome("\f006");
+    }
+    .reveal {
         &::before {
             line-height: 1.2em;
         }
@@ -186,49 +249,27 @@
 }
 
 .code {
-    .reveal {
+    .reveal::after {
         background-image: none;
         @include revealAwesome("\f121");
     }
 }
 
 .forms {
-    .reveal {
+    .reveal::after {
         background-image: none;
         @include revealAwesome("\f046");
     }
 }
 
 .refresh {
-    .reveal {
+    .reveal::after {
         background-image: none;
         @include revealAwesome("\f021");
     }
 }
 
-/* ******************* centered Angular 2 Shield logos ********************** */
-
-
-/*
-.augury {
-    .reveal {
-
-        div.banner {
-          background: -webkit-linear-gradient(rgb(81,45,168),rgb(103,58,183));
-          background: linear-gradient(rgb(81,45,168),rgb(103,58,183));
-        }
-
-        background-image: url('../../img/augury-logo.svg');
-        background-position: 10px 10px;
-        background-size: 100px;
-
-        @include transition(background-image 0.8s linear);
-        @include color(rgb(103,58,183));
-        a {
-            color: rgb(103,58,183);
-        }
-    }
-}*/
+/* ******************* centered Angular Shield logos ********************** */
 
 .ng-shield {
     margin: auto;

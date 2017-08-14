@@ -156,6 +156,12 @@ ul.model {
         max-height: 500px;
     }
 
+    &.big {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+
     &.mini {
         font-size: 14px;
         line-height: 16px;
@@ -251,6 +257,11 @@ ul.model {
     }
 }
 
+.display-none {
+    display: none;
+}
+
+
 /* device preview (iPhone iframe) */
 
 .device-preview {
@@ -322,3 +333,68 @@ ul.model {
 }
 
 /* end: cross out */
+
+
+// SASS vs LEss slides
+
+pre.less {
+    width:60%;
+    float: left;
+    margin: 0;
+    margin-left: -150px;
+
+    code {
+        border-top: 3px solid #2A4F84;
+        padding-top: 30px;
+    }
+
+    padding-top: 100px;
+    background-image: url('../../img/logos/less-logo.svg');
+    background-position: 10px 25px;
+    background-size: 120px;
+    background-repeat: no-repeat;
+
+}
+
+pre.sass {
+    width:60%;
+    float: right;
+    margin: 0;
+    margin-right: -150px;
+
+    code {
+        border-top: 3px solid #CD6799;
+        padding-top: 30px;
+    }
+
+    padding-top: 100px;
+    background-image: url('../../img/logos/sass-logo.svg');
+    background-position: 10px 0;
+    background-size: 120px;
+    background-repeat: no-repeat;
+}
+
+pre.less-sass {
+
+    code {
+        border-top: 3px solid #CD6799;
+        padding-top: 30px;
+        overflow: hidden;
+
+        &:before {
+            content: "\a0";
+            display: block;
+            border-top: 3px solid #2A4F84;
+            margin-left: -10px;
+            margin-right: -10px;
+
+        }
+    }
+
+    padding-top: 100px;
+    background-image: url('../../img/logos/less-logo.svg'), url('../../img/logos/sass-logo.svg');
+    background-position: 10px 25px, 155px 0;
+    background-size: 120px, 120px;
+    background-repeat: no-repeat, no-repeat;
+
+}
