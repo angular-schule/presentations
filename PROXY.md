@@ -5,7 +5,7 @@ title: Angular.Schule Proxy-Einstellungen
 
 ## Proxy-Einstellungen <small></small>
 
-Sofern in deinem Unternehmen der Internetzugang durch einen Proxy realisiert wird, müssen wir noch einige Einstellung setzen.  
+Sofern in deinem Unternehmen der Internetzugang durch einen Proxy realisiert wird, müssen wir noch einige Einstellung setzen. 
 Du kannst deine Einstellungen direkt in den folgenden Konfigurations-Dateien hinterlegen. 
 
 
@@ -59,5 +59,5 @@ Auch unsere IDE benötigt einen Internetzugang. Dieser lässt sich wie folgt set
 
 ``` 
 
-Bitte beachten, dass ggf. dein Benutzername und Passwort leicht von anderen Benutzern des Rechners ausgelesen werden können.  
+Bitte beachte, dass ggf. dein Benutzername und Passwort leicht von anderen Benutzern des Rechners ausgelesen werden können.
 Als permanente Lösung empfehlen wir z.B. den [Cntlm Authentication Proxy](http://cntlm.sourceforge.net/) - hier kannst du deine Zugangsdaten verschlüsselt hinterlegen.
