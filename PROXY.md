@@ -45,14 +45,9 @@ Auch unsere IDE benötigt einen Internetzugang. Dieser lässt sich wie folgt set
 ```
 // Place your settings in this file to overwrite the default settings
 {
-  "http.proxy": "http://user:pass@proxy",
-  "https.proxy": "http://user:pass@proxy",
+  "http.proxy": "http://<username>:<password>@<proxy-server-url>:<port>",
+  "http.proxyStrictSSL": false
 }
-
-
-… ggf. auch hier:
-   "http.proxyStrictSSL": false
-
 ``` 
 
 Bitte beachte, dass ggf. dein Benutzername und Passwort leicht von anderen Benutzern des Rechners ausgelesen werden können.
