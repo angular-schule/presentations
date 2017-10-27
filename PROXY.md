@@ -6,21 +6,22 @@ title: Angular.Schule Proxy-Einstellungen
 ## Proxy-Einstellungen <small></small>
 
 Sofern in deinem Unternehmen der Internetzugang durch einen Proxy realisiert wird, müssen wir noch einige Einstellung setzen. 
-Du kannst deine Einstellungen direkt in den folgenden Konfigurations-Dateien hinterlegen. 
+Du kannst deine Einstellungen über die Kommandozeile erledigen. 
 
 
 
 ### Proxy für NPM speichern
 
-Erzeuge/Bearbeite die Datei mit dem Namen `.npmrc` in `%userprofile%` (Windows) bzw. `~/` (Linux) mit folgendem Inhalt:
+Für den Befehl `npm install` benötigen wir Zugriff auf das Internet.
+Führe hierzu folgende drei Befehle aus:
 
+```bash
+npm config set proxy http://<username>:<password>@<proxy-server-url>:<port>
+npm config set https-proxy http://<username>:<password>@<proxy-server-url>:<port>
+npm config set strict-ssl false
 ```
-proxy=http://user:pass@proxy
-https-proxy=http://user:pass@proxy 
 
-#falls notwendig:
-#strict-ssl=false
-```
+Die korrekte Ausführung kannst du mit dem Befehl `npm info @angular/core` verifizieren. Besteht eine Verbindung mit dem Internet, so sollte nun eine lange Liste mit Informationen zum Angular-Core Paket erscheinen. Mit `npm config list` siehst du alle aktiven Einstellungen.
 
 ### Proxy für GIT speichern
 
