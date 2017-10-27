@@ -64,5 +64,7 @@ Auch unsere IDE benötigt einen Internetzugang. Dieser lässt sich wie folgt set
 }
 ``` 
 
+### Ausblick
+
 Bitte beachte, dass ggf. dein Benutzername und Passwort leicht von anderen Benutzern des Rechners ausgelesen werden können.
 Als permanente Lösung empfehlen wir z.B. den [Cntlm Authentication Proxy](http://cntlm.sourceforge.net/) - hier kannst du deine Zugangsdaten verschlüsselt hinterlegen.
