@@ -23,10 +23,24 @@ npm config set strict-ssl false
 
 Die korrekte Ausführung kannst du mit dem Befehl `npm info @angular/core` verifizieren. Besteht eine Verbindung mit dem Internet, so sollte nun eine lange Liste mit Informationen zum Angular-Core Paket erscheinen. Mit `npm config list` siehst du alle aktiven Einstellungen.
 
+### Optional: Proxy als Umgebungsvariable speichern
+
+Theoretisch sollte während eines `npm install` mit den oben genannten Einstellung alles glatt laufen.
+Sollte ein "postinstall script" die Proxyeinstellungen dennoch ignorieren, so helfen oft Umgebungsvariablen aus.
+
+```bash
+ set HTTP_PROXY=http://<username>:<password>@<proxy-server-url>:<port>
+ set HTTPS_PROXY=http://<username>:<password>@<proxy-server-url>:<port>
+ set STRICT_SSL=false 
+```
+
+*(Hinweis: Für ein normales "angular-cli" Projekt ist dieser Schritt nicht notwendig!)*
+
+
 ### Proxy für GIT speichern
 
 Wir werden ggf. den aktuellen Arbeitsstand aus unserem Github-Repository beziehen.
-Die folgenden beiden Befehle setzen den Proxy für GIT. Dies geschieht aber nur für github.com - so veränderst du nicht die generellen Einstellungen.
+Die folgenden beiden Befehle setzen den Proxy für GIT. Dies geschieht aber nur für github.com - so veränderst du nicht deine generellen Einstellungen.
 
 ```bash
 git config --global http.https://github.com/.proxy http://<username>:<password>@<proxy-server-url>:<port>
