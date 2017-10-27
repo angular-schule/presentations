@@ -12,7 +12,7 @@ Du kannst deine Einstellungen über die Kommandozeile erledigen.
 
 ### Proxy für NPM speichern
 
-Für den Befehl `npm install` benötigen wir Zugriff auf das Internet.
+Für den Befehl `npm install` benötigen wir Zugriff auf das Internet.  
 Führe hierzu folgende drei Befehle aus:
 
 ```bash
@@ -25,21 +25,16 @@ Die korrekte Ausführung kannst du mit dem Befehl `npm info @angular/core` verif
 
 ### Proxy für GIT speichern
 
-Erzeuge/Bearbeite die Datei mit dem Namen `.gitconfig` in `%userprofile%` bzw. `~/` (Linux) mit folgendem Inhalt:
+Wir werden ggf. den aktuellen Arbeitsstand aus unserem Github-Repository beziehen.
+Die folgenden beiden Befehle setzen den Proxy für GIT. Dies geschieht aber nur für github.com - so veränderst du nicht die generellen Einstellungen.
+
+```bash
+git config --global http.https://github.com/.proxy http://<username>:<password>@<proxy-server-url>:<port>
+git config --global http.https://github.com/.sslverify false
 
 ```
-[http]
-    proxy = http://user:pass@proxy
 
-#   falls notwendig:
-#   sslVerify = false
-
-[https]
-    proxy = http://user:pass@proxy
-
-#   falls notwendig:
-#   sslVerify = false
-```
+Mit `git config -l` siehst du alle aktiven Einstellungen.
 
 ### Proxy für Visual Studio Code speichern
 
