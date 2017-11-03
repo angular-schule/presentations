@@ -10,7 +10,7 @@ Du kannst diese Einstellungen über die Kommandozeile erledigen.
 
 
 
-### Proxy für NPM speichern
+### Schritt 1:<br>Proxy für NPM speichern
 
 Für den Befehl `npm install` benötigen wir Zugriff auf das Internet.  
 Führe hierzu folgende drei Befehle aus:
@@ -23,10 +23,12 @@ npm config set strict-ssl false
 
 Die korrekte Ausführung kannst du mit dem Befehl `npm info @angular/core` verifizieren. Besteht eine Verbindung mit dem Internet, so sollte nun eine lange Liste mit Informationen zum Angular-Core-Paket erscheinen. Mit `npm config list` siehst du alle aktiven Einstellungen.
 
-### Optional: Proxy als Umgebungsvariable speichern
+### Alternative zu Schritt 1:<br>Proxy als Umgebungsvariable speichern
+
+*(Hinweis: Für ein normales Projekt mit der Angular CLI ist dieser Schritt nicht notwendig!)*
 
 Theoretisch sollte während eines `npm install` mit den oben genannten Einstellung alles glatt laufen.
-Sollte ein sogenanntes *postinstall script* die Proxyeinstellungen dennoch ignorieren, so helfen oft Umgebungsvariablen aus.
+Sollte ein sogenanntes *postinstall script* die Proxyeinstellungen dennoch ignorieren, so helfen oft folgende Umgebungsvariablen aus.
 
 ```bash
  set HTTP_PROXY=http://<username>:<password>@<proxy-server-url>:<port>
@@ -34,10 +36,10 @@ Sollte ein sogenanntes *postinstall script* die Proxyeinstellungen dennoch ignor
  set STRICT_SSL=false 
 ```
 
-*(Hinweis: Für ein normales Projekt mit der Angular CLI ist dieser Schritt nicht notwendig!)*
+Die Umgebungsvariablen stellen eine alte Konvention dar, welche ursprünglich von [curl](https://curl.haxx.se/docs/manual.html) eingeführt wurde. Die Konvention wird vielen Tools berücksichtigt, unter anderem auch von NPM (sofern keine Konfigurationseinstellungen existieren). Durch die Umgebungsvariable `NO_PROXY` kannst du Ausnahmen (komma-separierte Liste von Host-Namen) für die Proxy-Regel definieren. Sofern du diese Option benötigst, solltest du die Umgebungsvariablen gegenüber der NPM-Konfiguration bevorzugen. Hier gibt es nämlich keine Einstellung für eine Ausnahme.
 
 
-### Proxy für Git speichern
+###  Schritt 2:<br>Proxy für Git speichern
 
 Wir werden ggf. den aktuellen Arbeitsstand aus unserem GitHub-Repository beziehen.
 Die folgenden beiden Befehle setzen den Proxy für Git. Dies geschieht aber nur für github.com – so veränderst du nicht deine generellen Einstellungen.
@@ -50,7 +52,7 @@ git config --global http.https://github.com/.sslverify false
 
 Mit `git config -l` siehst du alle aktiven Einstellungen.
 
-### Proxy für Visual Studio Code speichern
+### Schritt 3:<br>Proxy für Visual Studio Code speichern
 
 Auch unsere IDE benötigt einen Internetzugang. Dieser lässt sich wie folgt setzen:
 
