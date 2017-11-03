@@ -15,6 +15,10 @@
   ASP.NET Core und Angular: Die Kombination dieser zwei Technologien ist das Dreamteam, wenn es um Webanwendungen geht.
   Den Start erleichtert uns Microsoft mit den ASP.NET Core JavaScript Services. 
 
+* [Proxy-Einstellungen](PROXY) -- Anleitung
+
+  In dieser kurzen Anleitung zeigen wir, wie man die Arbeitsumgebung im Betrieb mit einem HTTP-Proxy einrichtet. 
+
 * [5 Tage Power-Workshop](https://angular.schule)
   
 	Lernen Sie alles zu Angular von den Buch-Experten! Besuchen Sie unsere Website unter [angular.schule](https://angular.schule) für ein individuelles Angebot.
