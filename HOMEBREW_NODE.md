@@ -5,8 +5,7 @@ title: Angular.Schule Node.js für Mac
 
 ## Node.js für den Mac einrichten
 
-Wir empfehlen wir deinen Mac nicht den offiziellen Intaller.
-Per Default benötigt man `sudo` für globale NPM Pakte, was ziemlich nervig ist.
+Wir empfehlen für deinen Mac nicht den offiziellen Node.js-Installer, sondern Homebrew:
 
 1. [Homebrew](https://brew.sh/) installieren
    ```
