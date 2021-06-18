@@ -50,7 +50,7 @@ Sollte Node nicht mehr auffindbar sein (`command not found: node`) oder weiterhi
 brew search node
 ```
 
-Führe anschließend folgende Befehle aus, um die richtige Version zu linken:
+Führe anschließend folgenden Befehle aus, um die richtige Version zu linken:
 
 ```bash
 brew unlink node
