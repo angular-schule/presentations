@@ -29,12 +29,13 @@ node --version
 npm --version
 ```
 
-Die Angular CLI benötigt mindestens Node.js 12.x.
+Die Angular CLI benötigt mindestens Node.js v12.14.
+Wir empfehlen dir jedoch, die aktuelle  Long Term Support (LTS) Version einzusetzen (aktuell v14).
 Eine bestehende Installation über Homebrew kannst du mit folgenden Befehlen aktualisieren:
 
 ```bash
 brew update
-brew upgrade node
+brew upgrade node@14
 ```
 
 Prüfen anschließend wieder die Versionen. Sollte NPM nicht aktualisiert worden sein, dann führe aus:
