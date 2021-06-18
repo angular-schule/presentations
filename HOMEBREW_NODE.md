@@ -44,3 +44,15 @@ Prüfen anschließend wieder die Versionen. Sollte NPM nicht aktualisiert worden
 npm update -g npm
 ```
 
+Sollte Node nicht mehr auffindbar sein (`command not found: node`) oder weiterhin die falsche Version angezeigt werden, so kannst du dir mit folgendem Befehl alle installierten Versionen anzeigen lassen:
+
+```bash
+brew search node
+```
+
+Führe anschließend folgende Befehle aus, um die richtige Version zu linken:
+
+```bash
+brew unlink node
+brew link node@14
+```
