@@ -13,7 +13,7 @@ Wir empfehlen für deinen Mac nicht den offiziellen Node.js-Installer, sondern d
    ```
 2. Node.js installieren:
    ```bash
-   brew install node@14
+   brew install node@16
    ```
 
 Das war's – viel Spaß mit Node.js!
@@ -25,17 +25,17 @@ Das war's – viel Spaß mit Node.js!
 Prüfe zuerst die Versionen:
 
 ```bash
-node --version
-npm --version
+node -v
+npm -v
 ```
 
-Die Angular CLI benötigt mindestens Node.js v12.14.
-Wir empfehlen dir jedoch, die aktuelle  Long Term Support (LTS) Version einzusetzen (aktuell v14).
+Die Angular CLI benötigt mindestens Node.js v12.20.
+Wir empfehlen dir jedoch, die aktuelle Long Term Support (LTS) Version einzusetzen (aktuell v16).
 Eine bestehende Installation über Homebrew kannst du mit folgenden Befehlen aktualisieren:
 
 ```bash
 brew update
-brew upgrade node@14
+brew upgrade node@16
 ```
 
 Prüfen anschließend wieder die Versionen. Sollte NPM nicht aktualisiert worden sein, dann führe aus:
@@ -54,5 +54,5 @@ Führe anschließend folgende Befehle aus, um die richtige Version zu linken:
 
 ```bash
 brew unlink node
-brew link node@14
+brew link node@16
 ```
